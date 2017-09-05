@@ -3,6 +3,10 @@
 
 from recommonmark.parser import CommonMarkParser
 
+extensions = [
+    'sphinx.ext.autosectionlabel',
+]
+
 templates_path = ['_templates']
 source_suffix = '.md'
 source_parsers = { '.md': CommonMarkParser }

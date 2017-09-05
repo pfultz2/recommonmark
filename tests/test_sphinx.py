@@ -210,3 +210,12 @@ class CustomExtensionTests(SphinxIntegrationTests):
         self.assertIn('<th class="head">abc</th>', output)
         self.assertIn('<th class="head">data</th>', output)
         self.assertIn('</table>', output)
+
+class XrefTests(SphinxIntegrationTests):
+
+    def test_integration(self):
+        with sphinx_built_file('sphinx_xref', '_build/text/index.html') as output:
+            print output
+            self.assertIn('href="link.html"', output)
+            self.assertIn('href="link.html#another-title"', output)
+            self.assertIn('href="http://www.google.com"', output)
