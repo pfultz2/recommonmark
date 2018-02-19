@@ -1,4 +1,6 @@
-__version__ = '5000.4.0'
+"""Docutils CommonMark parser"""
+
+__version__ = '0.4.0'
 
 
 def setup(app):

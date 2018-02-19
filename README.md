@@ -8,6 +8,7 @@ Documentation is available on Read the Docs: <http://recommonmark.readthedocs.or
 
 Contents
 --------
+
 * [API Reference](api_ref.md)
 * [AutoStructify Component](auto_structify.md)
 
@@ -34,7 +35,15 @@ source_suffix = ['.rst', '.md']
 
 This allows you to write both `.md` and `.rst` files inside of the same project.
 
+### Links
+
+For all links in commonmark that aren't explicit URLs, they are treated as cross references with the [`:any:`](http://www.sphinx-doc.org/en/stable/markup/inline.html#role-any) role. This allows referencing a lot of things including files, labels, and even objects in the loaded domain.
+
 ### AutoStructify
+
+AutoStructify makes it possible to write your documentation in Markdown, and automatically convert this
+into rST at build time. See [the AutoStructify Documentation](http://recommonmark.readthedocs.org/en/latest/auto_structify.html)
+for more information about configuration and usage.
 
 To use the advanced markdown to rst transformations you must add `AutoStructify` to your Sphinx conf.py.
 
@@ -54,11 +63,11 @@ def setup(app):
 
 See https://github.com/rtfd/recommonmark/blob/master/docs/conf.py for a full example.
 
-AutoStructify comes with the following options. See http://recommonmark.readthedocs.org/en/latest/auto_structify.html for more information about the specific features.
+AutoStructify comes with the following options. See [http://recommonmark.readthedocs.org/en/latest/auto_structify.html](http://recommonmark.readthedocs.org/en/latest/auto_structify.html) for more information about the specific features.
 
 * __enable_auto_toc_tree__: enable the Auto Toc Tree feature.
 * __auto_toc_tree_section__: when True, Auto Toc Tree will only be enabled on section that matches the title.
-* __enable_auto_doc_ref__: enable the Auto Doc Ref feature.
+* __enable_auto_doc_ref__: enable the Auto Doc Ref feature. **Deprecated**
 * __enable_math__: enable the Math Formula feature.
 * __enable_inline_math__: enable the Inline Math feature.
 * __enable_eval_rst__: enable the evaluate embedded reStructuredText feature.
